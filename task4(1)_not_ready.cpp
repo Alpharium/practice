@@ -1,4 +1,5 @@
 //this code isnt finished, so be patient please
+//interpolation for vector of points
 #include <stdio.h>
 #include <iostream>
 #include <vector>
