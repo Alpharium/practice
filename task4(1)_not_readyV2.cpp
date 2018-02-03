@@ -9,20 +9,28 @@
 #include <string>
 const int N = 1000;
 const int K = 1000;
+using std::vector;
+using std::pair;
+using std::ofstream;
+using std::ifstream;
+
 class all_reader
 {
+	
 private:
 	vector<pair<double, double>> mas_of_points;
 	vector<double> mas_of_arguments;
 	ofstream fout;
 	ifstream fin;
-	int n_calc, k_arg;
-	std::string char_mas, char_tmp;//for pair.first and pair.second
+	int n_calc;
+	int k_arg;
+	std::string char_mas;
+	std::string	char_tmp;
 	std::string file_name;
 
 public:
 	vector<pair<double,double>> fftovpoints() {
-		cin >> file_name;
+		std::cin >> file_name;
 		fin.open(file_name);
 		fin >> n_calc;
 		for (int i = 0;i < n_calc;i++) {
@@ -34,7 +42,7 @@ public:
 		return mas_of_points;
 	}
 	vector<double> fftovarguments() {
-		cin >> file_name;
+		std::cin >> file_name;
 		fin.open(file_name);
 		fin >> k_arg;
 		for (int i = 0;i < k_arg;i++) {
@@ -44,11 +52,8 @@ public:
 		fin.close();
 		return mas_of_arguments;
 	}
-
-
 };
 
-using namespace std;
 int main()
 {
 	vector<pair<double, double>> mas_of_points;
@@ -62,7 +67,8 @@ int main()
 	fout.open("solution.txt");
 	fout << "4\nHello World\n\KAPPA PRIDE\n";
 	fout.close();*/
-	fin.open("calculated.txt");
+	std::cin >> char_mas;
+	fin.open(char_mas);
 	fin >> n_calc;
 	for (int i = 0;i < n_calc;i++){
 	fin >> char_mas;
@@ -78,8 +84,8 @@ int main()
 		mas_of_arguments.push_back(std::make_pair(atof(char_mas.c_str()),0));
 	}
 	fin.close();
-
-	//cout << char_mas << endl;
+/*
+	cout << char_mas << endl;*/
 	/*for (int i = 0;char_mas != '\0';i++) {
 		cout << char_mas[i];
 	}*/
