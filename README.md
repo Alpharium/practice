@@ -1,5 +1,5 @@
 # practice
-# Here i collect a solutions for my practice tasks. 
+# Here i collect solutions for my practice tasks. 
 # Some links below is sources for my tasks.
 # https://acmp.ru
 # http://cppquiz.org/
